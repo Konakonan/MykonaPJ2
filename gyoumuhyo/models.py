@@ -32,4 +32,5 @@ class Employee(models.Model):
     created_at=models.DateTimeField("日付", default=timezone.now)
     
     def __str__(self):
-        return "{0}  {1}{2}  {3} ".format(self.employee_id, self.first_name, self.last_name,self.company_name)
+        return "{0}  {1}{2}  {3} ".format(
+            self.employee_id, self.first_name, self.last_name,self.company_name)

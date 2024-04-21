@@ -1,0 +1,24 @@
+{% extends "gyoumuhyo/base.html" %}
+{% block content %}
+
+<form action="" method="GET">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">検索</button>
+ </form>
+<table border="1">
+    <tr>
+        <th>姓</th>
+        <th>名</th>
+        <th>派遣会社名</th>
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td>{{ post.first_name }}</td>
+        <td>{{ post.last_name }}</td>
+        <th>{{ post.company_name }}</th>
+    </tr>
+    {% endfor %}
+ </table>
+ {% endblock %}
+
