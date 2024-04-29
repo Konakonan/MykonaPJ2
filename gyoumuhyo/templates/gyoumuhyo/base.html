@@ -1,14 +1,17 @@
-
+{% load static %}
 <html lang="ja">
     <head>
         <title>派遣社員の振り分けシステム</title>
         <meta name="discription" content="派遣社員振り分けシステム">
+        <link rel="stylesheet" href="{% static 'css/gyoumuhyo.css' %}">
     </head>
     <header>
         <h1><a href="{% url 'gyoumuhyo:post_list' %}">こんにちは^^</a></h1>
         <ul>
             <li><a href="{% url 'gyoumuhyo:post_list2' %}">曜日別検索画面へ</a></li>
-            <li>^_^</li>
+            {% if user.is_superuser %}
+            <li><a href="{% url 'admin:gyoumuhyo_employee_add'%}">社員を追加</a></li>
+            {% endif %}
         </ul>
         <nav>
 

@@ -1,0 +1,37 @@
+h1{
+    background-color:aliceblue;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*  検索画面のcss b*/
+div.div1{
+    display: flex; /* tableを横に並べる　*/
+    padding-top: 10px;
+    padding-bottom: 200px;
+}
+
+table{
+    border-collapse:  collapse; /* th,tdの各線を重ねる */
+    table-layout: fixed;
+    
+}
+
+th,td {
+    border: solid 1px;   /* 線を指定 */       
+}
+
+.item1{
+    padding: 3px;
+}
+
+th{
+    background-color:aliceblue;
+}
+
+.table1{
+    width: 40%;
+    text-align: center;
+}

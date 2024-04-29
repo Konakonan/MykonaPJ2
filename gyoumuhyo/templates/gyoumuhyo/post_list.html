@@ -2,15 +2,13 @@
 {% block content %}
 <table border="1">
     <tr>
-    　　 <th>姓</th>
-    　　 <th>名</th>
+    　　 <th>名前</th>
         <th>派遣会社名</th>
         <th>出勤可能曜日</th>
     </tr>
     {% for post in posts %}
     <tr>
-        <td>{{ post.first_name }}</td>
-        <td>{{ post.last_name }}</td>
+        <td>{{ post.first_name }}　{{ post.last_name }}</td>
         <td>{{ post.company_name }}</td>
         <td>{% for post in post.syukkin_yobi.all %}{{post}},{% endfor %}</td>
     </tr>

@@ -14,13 +14,20 @@ class Syukkin_yobi(models.Model):
     def __str__(self):
         return self.name
 
+class SworkArea(models.Model):
+    name=models.CharField("作業エリア", max_length=10)
+    created_at=models.DateTimeField("日付", default=timezone.now)
+    
+    def __str__(self):
+        return self.name
+    
 class Employee(models.Model):
     GENDER_CHOICES = (
         (1, "男"),
         (2, "女"),
         (3,"その他")
     )
-    employee_id=models.IntegerField("社員ID", primary_key=True,blank=False,null=False)
+    employee_id=models.IntegerField("社員ID",max_length=6, primary_key=True,blank=False,null=False)
     first_name=models.CharField("姓", max_length=20)
     last_name=models.CharField("名", max_length=20)
     gender = models.IntegerField("性別", choices=GENDER_CHOICES,null=True, blank=True)

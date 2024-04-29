@@ -1,0 +1,10 @@
+{% extends "gyoumuhyo/base.html" %}
+{% block content %}
+
+<form action="" method="GET">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">検索</button>
+ </form>
+
+{% endblock %}
